@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+{% if name != None:%}
+  <h1>{{name | title}}'s Games</h1>
+  <p>Wecome sir {{name | title}}</p>
+  <p>Here is your score {{score}}</p>
+{% else: %}
+<h1>Games</h1>
+<p>Welcome to games</p>
+{% endif %}
+{% endblock%}

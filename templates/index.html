@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>HOME PAGE</h1>
+  <p>
+    log in system to all the games I've created in the past
+  </p>
+  {% if score != None: %}
+    <p>
+      Thank you for visiting {{score}} times
+      <!--
+      {% for i in test:%}
+        <p>{{i.id, i.name, i.pw, i.user_scores}}</p>
+      {% endfor %}
+    -->
+    </p>
+  {% else: %}
+  <p>
+    Thank you for visiting !!
+  </p>
+  {% endif %}
+{% endblock %}

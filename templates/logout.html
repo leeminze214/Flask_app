@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Logout page</h1>
+    <p>Log out of account {{name | title}} by confirming your password</p>
+    <form action="/logout" method="post">
+      <label for='password'>password:</label>
+      <input type="text" name="password">
+      <input type='submit' name='submit_recipe' value="Logout">
+    </form>
+
+{% endblock%}

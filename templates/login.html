@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block content%}
+<h1>Login Page</h1>
+<form action="/login" method="post">
+  {{ acc_form.hidden_tag() }}
+  {{acc_form.name.label}}
+  {{acc_form.name}}
+  <br>
+  {{acc_form.pw.label}}
+  {{acc_form.pw}}
+  {{acc_form.submit}}
+</form>
+{% endblock %}

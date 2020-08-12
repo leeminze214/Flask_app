@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lee Website</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+  <body class = test>
+    <div>
+      <a href="/">home page</a>
+      |
+      <a href="/games">GAMES</a>
+      --------------
+      |
+      <a href="/signup">sign up</a>
+      |
+      <a href="/login">login</a>
+      |
+      <a href="/logout">logout</a>
+    </div>
+    {%with messages = get_flashed_messages()%}
+      {%if messages:%}
+        {%for x in messages:%}
+          <p>{{x}}</p>
+        {%endfor%}
+      {%endif%}
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
